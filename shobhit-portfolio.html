@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shobhit Srivastava | Gen AI Data Scientist</title>
+  <meta name="description" content="Personal portfolio of Shobhit Srivastava, a Gen AI Data Scientist focused on practical AI products, Python workflows, and modern machine learning systems." />
+  <meta property="og:title" content="Shobhit Srivastava | Gen AI Data Scientist" />
+  <meta property="og:description" content="A dark-mode personal website introducing Shobhit Srivastava, his background, focus areas, and project space." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@400,500,700&display=swap" />
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.22);
+      --shadow-md: 0 12px 32px rgba(0,0,0,0.28);
+      --font-display: 'Boska', Georgia, serif;
+      --font-body: 'Satoshi', Inter, sans-serif;
+      --color-bg: #111210;
+      --color-surface: #171917;
+      --color-surface-2: #1d201e;
+      --color-surface-offset: #232725;
+      --color-border: rgba(255,255,255,0.10);
+      --color-divider: rgba(255,255,255,0.08);
+      --color-text: #f4f1ea;
+      --color-text-muted: #b5b1a7;
+      --color-text-faint: #7f7a72;
+      --color-primary: #7ed6c1;
+      --color-primary-active: #4fa592;
+      --color-primary-soft: rgba(126,214,193,0.10);
+      --content: 1120px;
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    * , *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top right, rgba(126,214,193,0.14), transparent 24%),
+        linear-gradient(180deg, #111210 0%, #0d0e0d 100%);
+      color: var(--color-text);
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    button, input, textarea { font: inherit; }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+    .skip-link {
+      position: absolute; left: var(--space-4); top: -40px; background: var(--color-primary); color: #0b0c0b;
+      padding: var(--space-2) var(--space-4); border-radius: var(--radius-full, 999px); z-index: 100;
+    }
+    .skip-link:focus { top: var(--space-4); }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    .header {
+      position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px);
+      background: rgba(17,18,16,0.74); border-bottom: 1px solid var(--color-divider);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
+      padding: var(--space-4) 0;
+    }
+    .brand { display: flex; align-items: center; gap: var(--space-3); font-size: var(--text-sm); }
+    .brand svg { width: 34px; height: 34px; color: var(--color-primary); }
+    .brand-name { letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-muted); }
+    .nav-links { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+    .nav-links a { font-size: var(--text-sm); color: var(--color-text-muted); }
+    .nav-links a:hover { color: var(--color-text); }
+    main section { padding: clamp(var(--space-12), 10vw, var(--space-24)) 0; }
+    .hero {
+      min-height: 86vh; display: grid; align-items: center;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-8); align-items: end;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: var(--space-2); padding: 0.4rem 0.8rem;
+      font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.16em;
+      color: var(--color-primary); background: var(--color-primary-soft); border: 1px solid rgba(126,214,193,0.18);
+      border-radius: 999px;
+      margin-bottom: var(--space-5);
+    }
+    h1, h2 { margin: 0; font-family: var(--font-display); line-height: 0.98; }
+    h1 { font-size: var(--text-3xl); max-width: 10ch; }
+    .hero p { margin: var(--space-5) 0 0; max-width: 60ch; color: var(--color-text-muted); }
+    .hero-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-8); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.9rem 1.2rem;
+      border-radius: 999px; border: 1px solid transparent; transition: all var(--transition);
+      font-size: var(--text-sm);
+    }
+    .btn-primary { background: var(--color-primary); color: #0b0c0b; }
+    .btn-primary:hover { background: #93dfcd; }
+    .btn-secondary { border-color: var(--color-border); color: var(--color-text); background: rgba(255,255,255,0.02); }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.22); background: rgba(255,255,255,0.04); }
+    .hero-card, .panel, .project-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--color-border); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm);
+    }
+    .hero-card { padding: var(--space-8); }
+    .hero-card .meta { display: grid; gap: var(--space-5); }
+    .meta-row { padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-divider); }
+    .meta-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .meta-label { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-text-faint); margin-bottom: var(--space-2); }
+    .meta-value { font-size: var(--text-lg); }
+    .section-head { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-8); margin-bottom: var(--space-10); }
+    .section-head p { color: var(--color-text-muted); margin: 0; }
+    .about-grid, .focus-grid, .project-grid {
+      display: grid; gap: var(--space-5);
+    }
+    .about-grid { grid-template-columns: 1.1fr 0.9fr; }
+    .panel { padding: var(--space-6); }
+    .panel h3 { margin: 0 0 var(--space-3); font-size: var(--text-lg); }
+    .muted { color: var(--color-text-muted); }
+    .focus-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .project-card { padding: var(--space-6); display: flex; flex-direction: column; min-height: 250px; }
+    .project-tag {
+      display: inline-flex; width: fit-content; margin-bottom: var(--space-4); padding: 0.35rem 0.65rem; border-radius: 999px;
+      background: rgba(255,255,255,0.04); color: var(--color-text-muted); font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .project-card h3 { margin: 0 0 var(--space-3); font-size: var(--text-lg); }
+    .project-card p { margin: 0; color: var(--color-text-muted); }
+    .placeholder-note {
+      margin-top: auto; padding-top: var(--space-6); font-size: var(--text-sm); color: var(--color-primary);
+    }
+    .contact-box {
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-6); align-items: stretch;
+    }
+    .contact-card { padding: var(--space-8); }
+    .contact-list { display: grid; gap: var(--space-4); margin-top: var(--space-5); }
+    .contact-item { padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-divider); }
+    .contact-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .footer {
+      padding: var(--space-6) 0 var(--space-10); border-top: 1px solid var(--color-divider); color: var(--color-text-faint); font-size: var(--text-sm);
+    }
+    @media (max-width: 920px) {
+      .hero-grid, .section-head, .about-grid, .contact-box, .focus-grid, .project-grid { grid-template-columns: 1fr; }
+      .hero { min-height: auto; padding-top: var(--space-12); }
+      h1 { max-width: 12ch; }
+    }
+    @media (max-width: 640px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .hero-card, .panel, .project-card, .contact-card { padding: var(--space-5); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Shobhit Srivastava home">
+        <svg viewBox="0 0 64 64" fill="none" role="img" aria-hidden="true">
+          <path d="M14 47V17h11.5c6.3 0 10.5 3.1 10.5 8.3 0 3.2-1.7 5.8-4.7 7.1 4.2 1 6.7 3.9 6.7 7.9 0 5.6-4.5 9.7-11.8 9.7H14Zm8-18h2.9c2.2 0 3.5-1.1 3.5-2.9s-1.3-2.8-3.5-2.8H22v5.7Zm0 12h4.3c2.4 0 3.8-1.2 3.8-3.2s-1.4-3.1-3.8-3.1H22V41Z" fill="currentColor"/>
+          <path d="M44 18h6v28h-6z" fill="currentColor" opacity="0.88"/>
+        </svg>
+        <span class="brand-name">Shobhit Srivastava</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#focus">Focus</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Personal website · dark mode</div>
+          <h1>Shobhit Srivastava</h1>
+          <p><strong>Gen AI Data Scientist</strong> building practical AI systems with a sharp interest in usable products, modern machine learning workflows, and clean technical execution.</p>
+          <p>Hi, I am a seasoned Gen AI data scientist and a consultant. This site is a simple introduction to who I am, what I focus on, and the kind of work I want the world to remember me for.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See project space</a>
+            <a class="btn btn-secondary" href="#about">Read my story</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Profile snapshot">
+          <div class="meta">
+            <div class="meta-row">
+              <div class="meta-label">Current identity</div>
+              <div class="meta-value">Gen AI Data Scientist</div>
+            </div>
+            <div class="meta-row">
+              <div class="meta-label">Working style</div>
+              <div class="meta-value">Clear thinking, practical delivery, strong technical depth</div>
+            </div>
+            <div class="meta-row">
+              <div class="meta-label">Website purpose</div>
+              <div class="meta-value">To show who I am and create a public home for my work</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About me</h2>
+          <p>This portfolio uses a minimal dark visual language so your name and message stay in focus. The layout is intentionally simple, which makes it easy to expand later with real projects, achievements, links, and a resume.</p>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <h3>Professional summary</h3>
+            <p class="muted">I work in generative AI with a consultant mindset: understand the problem clearly, choose the right approach, and turn ideas into usable outcomes. I care about solutions that are technically strong but still understandable to real people.</p>
+          </article>
+          <article class="panel">
+            <h3>What this site says</h3>
+            <p class="muted">You are not just another profile on a social platform. You now have a personal space that can grow into a strong professional identity page, a project showcase, and a future portfolio for job opportunities or freelance work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="container">
+        <div class="section-head">
+          <h2>Focus areas</h2>
+          <p>Since you did not share detailed project write-ups yet, this section introduces your direction through capability themes. Later, each card can link to a full case study or GitHub repository.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="panel">
+            <h3>Generative AI</h3>
+            <p class="muted">Designing and shaping AI experiences that go beyond demos and move toward practical, real-world use.</p>
+          </article>
+          <article class="panel">
+            <h3>Data science</h3>
+            <p class="muted">Using structured thinking, experimentation, and model-driven workflows to solve meaningful business and product problems.</p>
+          </article>
+          <article class="panel">
+            <h3>Consulting mindset</h3>
+            <p class="muted">Bridging technical depth with client-facing clarity so complex systems become actionable decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Project space</h2>
+          <p>You entered placeholder project text, so I converted this area into a polished project placeholder section instead of showing weak empty cards. Replace these with real project names and short results when you are ready.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-tag">Project 01</span>
+            <h3>Generative AI solution</h3>
+            <p>A space reserved for one strong project that explains the problem, your approach, the tools used, and the final impact.</p>
+            <div class="placeholder-note">Add a real title, stack, and measurable outcome.</div>
+          </article>
+          <article class="project-card">
+            <span class="project-tag">Project 02</span>
+            <h3>Applied data science work</h3>
+            <p>A place for a case study that shows analytical thinking, experimentation, and how your work created practical value.</p>
+            <div class="placeholder-note">Ideal for model, dashboard, or prediction work.</div>
+          </article>
+          <article class="project-card">
+            <span class="project-tag">Project 03</span>
+            <h3>Consulting engagement</h3>
+            <p>A future section for a consulting project where you translated a complex requirement into a clear technical direction.</p>
+            <div class="placeholder-note">Great for client-focused AI or automation work.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-box">
+        <div class="contact-card hero-card">
+          <div class="eyebrow">Contact</div>
+          <h2>Keep this section ready</h2>
+          <p class="muted">You chose to skip email and social links for now, so this section is written as a ready-to-complete contact block. Once you add your email, GitHub, LinkedIn, and resume, this page will feel fully professional.</p>
+        </div>
+        <div class="contact-card panel">
+          <h3>Next details to add</h3>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="meta-label">Email</div>
+              <div class="muted">Add your professional email</div>
+            </div>
+            <div class="contact-item">
+              <div class="meta-label">GitHub</div>
+              <div class="muted">Add your project or code profile link</div>
+            </div>
+            <div class="contact-item">
+              <div class="meta-label">LinkedIn</div>
+              <div class="muted">Add your public professional profile</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Shobhit Srivastava · Personal portfolio website</div>
+  </footer>
+</body>
+</html>
